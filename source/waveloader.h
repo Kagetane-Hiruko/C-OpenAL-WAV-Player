@@ -3,6 +3,16 @@
 
 #ifndef KAGETANE_HIRUKO_API
 
+	#ifdef __cplusplus
+		
+		#define EXTERN_C extern "C"
+	
+	#else
+
+		#define EXTERN_C
+
+	#endif
+
 	#ifdef _WIN32
 
 		#ifdef BUILD_MODE
@@ -22,6 +32,8 @@
 	#endif
 
 	#define DREF(pointer) (*pointer)
+
+	
 
 #endif
 
@@ -172,7 +184,7 @@ typedef struct
 	This function is used to fetch all information form given wave file and return formated struct.
 
 **/
-extern "C" wave_t * KAGETANE_HIRUKO_API load_wave_file(const char * file_path);
+EXTERN_C wave_t * KAGETANE_HIRUKO_API load_wave_file(const char * file_path);
 
 /**
 
@@ -183,7 +195,7 @@ extern "C" wave_t * KAGETANE_HIRUKO_API load_wave_file(const char * file_path);
 	This function is used to free wave struct.
 
 **/
-extern "C" void KAGETANE_HIRUKO_API close_wave_file(wave_t * wave_file);
+EXTERN_C void KAGETANE_HIRUKO_API close_wave_file(wave_t * wave_file);
 
 
 #endif
