@@ -25,3 +25,7 @@ close_wave_file(wave_file);
 
 
 ```
+
+## Requirements
+
+* C-File-Manager [https://github.com/Kagetane-Hiruko/C-File-Manager]
